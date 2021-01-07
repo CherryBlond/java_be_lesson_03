@@ -82,7 +82,6 @@ public class ImgurTest {
 
         given()
                 .headers(headers)
-                .multiPart("image", "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7")
                 .expect()
                 .body("success", is(true))
                 .body("data.id", is(imageHash))
@@ -203,7 +202,7 @@ public class ImgurTest {
     }
 
     @Test
-    void addToFavoritupdateUnknownHash() {
+    void updateUnknownHash() {
         given()
                 .headers(headers)
                 .multiPart("title", "Heart")
